@@ -7,21 +7,26 @@ WEEKS_PER_LEVEL = {"default": 1, "projects": 2, "statistics": 1.5, "deep_learnin
 
 
 # ---------------------------------------------------------------- LOADING
+def _read(path, needed):
+    with open(path, newline="", encoding="utf-8-sig") as f:
+        for r in csv.DictReader(f):
+            row = {(k or "").strip().lower(): (v or "").strip() for k, v in r.items()}
+            if all(row.get(k) for k in needed):
+                yield row
+
+
 def load_careers(path=DATA / "careers.csv"):
     careers = {}
-    with open(path, newline="") as f:
-        for r in csv.DictReader(f):
-            careers.setdefault(r["career"], {})[r["skill"]] = (int(r["level"]), float(r["weight"]))
+    for r in _read(path, ["career", "skill", "level", "weight"]):
+        careers.setdefault(r["career"], {})[r["skill"]] = (int(r["level"]), float(r["weight"]))
     return careers
 
 
 def load_prereqs(path=DATA / "prereqs.csv"):
     prereqs = {}
-    with open(path, newline="") as f:
-        for r in csv.DictReader(f):
-            prereqs.setdefault(r["skill"], []).append(r["prereq"])
+    for r in _read(path, ["skill", "prereq"]):
+        prereqs.setdefault(r["skill"], []).append(r["prereq"])
     return prereqs
-
 
 def all_skills(careers):
     return sorted({s for reqs in careers.values() for s in reqs})
