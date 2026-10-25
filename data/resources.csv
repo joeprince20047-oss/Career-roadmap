@@ -1,0 +1,14 @@
+skill,title,url,hours
+python,Kaggle Learn: Python,https://www.kaggle.com/learn/python,5
+sql,Kaggle Learn: Intro to SQL,https://www.kaggle.com/learn/intro-to-sql,4
+statistics,Khan Academy: Statistics and probability,https://www.khanacademy.org/math/statistics-probability,20
+pandas,Kaggle Learn: Pandas,https://www.kaggle.com/learn/pandas,4
+visualization,Kaggle Learn: Data Visualization,https://www.kaggle.com/learn/data-visualization,4
+ml,Kaggle Learn: Intro to Machine Learning,https://www.kaggle.com/learn/intro-to-machine-learning,3
+model_evaluation,scikit-learn: Model evaluation guide,https://scikit-learn.org/stable/modules/model_evaluation.html,4
+git,Pro Git book (free),https://git-scm.com/book/en/v2,6
+deep_learning,Kaggle Learn: Intro to Deep Learning,https://www.kaggle.com/learn/intro-to-deep-learning,4
+projects,Kaggle: Titanic competition,https://www.kaggle.com/c/titanic,10
+mlops,Made With ML,https://madewithml.com,15
+cloud,AWS Skill Builder,https://skillbuilder.aws,6
+excel,Microsoft Excel help and learning,https://support.microsoft.com/excel,5
