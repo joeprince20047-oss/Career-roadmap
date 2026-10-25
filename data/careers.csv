@@ -1,4 +1,4 @@
-career	skill	level	weight
+career,skill,level,weight 
 Data Scientist	python	4	1
 Data Scientist	sql	3	0.8
 Data Scientist	statistics	4	1
