@@ -1,66 +1,53 @@
-# Career Recommendation & Skill-Gap Roadmap
+# Career Roadmap
 
-A Python and Streamlit prototype that recommends career paths for AI & Data Science students, identifies their skill gaps, and builds a week-by-week learning roadmap. It also includes metrics to evaluate whether the recommendations actually help.
+A multi-user Streamlit app that recommends a career for AI and Data Science students, finds their skill gaps, and turns them into a weekly plan they can track day to day.
 
 ## Features
 
-- **Career recommendation:** ranks careers (Data Scientist, Data Analyst, ML Engineer) by how well the student's skills match.
-- **Skill-gap analysis:** finds missing skills and ranks them by importance.
-- **Roadmap generation:** orders skills by prerequisites (for example, statistics before ML) and assigns weeks.
-- **Evaluation metrics:** relevance, skill-gap coverage, assessment improvement, and user satisfaction.
-- **Editable data:** careers and prerequisites live in CSV files, so no code changes are needed to add roles.
+- **Accounts:** sign up with a username and password (passwords are salted and hashed).
+- **Setup:** choose a target career and rate your skills once.
+- **Today:** study streak, this week's focus steps with learning resources, one-tap step completion, daily study log.
+- **My plan:** timeline with done / current / behind / upcoming steps, readiness score, skill radar.
+- **Skill check:** pre-test and post-test (different questions, same skills) with normalized learning gain.
+- **Progress:** study time, skill levels over time, test history.
+- **Feedback:** clarity, usefulness and topic-order ratings.
+- **Admin:** user counts, average learning gain, satisfaction, common skill gaps, CSV export.
 
 ## Project structure
 
 ```
-career_project/
-├── data/
-│   ├── careers.csv     # career, skill, required level (0-5), importance weight
-│   └── prereqs.csv     # skill, prerequisite skill
-├── engine.py           # recommendation, gaps, roadmap, metrics
-├── app.py              # Streamlit interface
-└── requirements.txt
+app.py          Streamlit interface
+engine.py       recommendation, skill gaps, roadmap, metrics
+db.py           storage (SQLite locally, Postgres in production)
+data/
+  careers.csv   career, skill, level, weight
+  prereqs.csv   skill, prerequisite
+  quiz.csv      pre/post questions (form A and B)
+  resources.csv learning link per skill
 ```
 
-## Run it
+## Run locally
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## How it works
+Data is stored in `data/app.db` (SQLite).
 
-| Step | Method |
-|------|--------|
-| Career fit | Weighted share of required skill levels the student already meets |
-| Skill gap | `required level - current level`, priority = `gap x weight` |
-| Roadmap | Prerequisite-aware ordering, then weeks assigned per level gained |
+## Deploy for many users
 
-## Evaluation metrics
+Streamlit Community Cloud resets local files when the app restarts, so use a free Postgres database (Neon or Supabase) for permanent storage.
 
-| Metric | Measure |
-|--------|---------|
-| Recommendation relevance | Hit@k: is the student's validated career in the top k? |
-| Skill-gap coverage | Precision, recall and F1 against expert-labelled gaps |
-| Assessment improvement | Raw gain and normalized gain `(post - pre) / (100 - pre)` |
-| User satisfaction | Average 1-5 ratings for clarity, usefulness and topic order |
+In the app's **Settings > Secrets**, add:
+
+```toml
+DATABASE_URL = "postgresql://user:password@host:5432/dbname"
+ADMIN_PASSWORD = "choose-a-strong-password"
+```
+
+Tables are created automatically on first run.
 
 ## Customize
 
-Add a career by appending rows to `data/careers.csv`:
-
-```
-career,skill,level,weight
-Data Engineer,sql,5,1.0
-```
-
-## Future work
-
-- Build the career dataset from real job postings
-- Save student results to SQLite for real evaluation data
-- Recommend learning resources per skill
-
-## Tech stack
-
-Python, pandas, Streamlit
+Add careers, skills and quiz questions by editing the CSV files in `data/`. No code changes needed.
