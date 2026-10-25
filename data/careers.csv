@@ -1,28 +1,28 @@
-career,skill,level,weight 
-Data Scientist	python	4	1
-Data Scientist	sql	3	0.8
-Data Scientist	statistics	4	1
-Data Scientist	pandas	4	0.9
-Data Scientist	visualization	3	0.7
-Data Scientist	ml	4	1
-Data Scientist	model_evaluation	4	0.9
-Data Scientist	git	3	0.5
-Data Scientist	projects	3	0.8
-Data Scientist	deep_learning	2	0.4
-Data Scientist	cloud	2	0.3
-Data Scientist	mlops	1	0.2
-Data Analyst	sql	4	1
-Data Analyst	excel	4	0.9
-Data Analyst	visualization	4	1
-Data Analyst	pandas	3	0.8
-Data Analyst	statistics	3	0.8
-Data Analyst	python	3	0.6
-Data Analyst	projects	3	0.7
-ML Engineer	python	5	1
-ML Engineer	ml	4	1
-ML Engineer	deep_learning	4	0.8
-ML Engineer	git	4	0.8
-ML Engineer	cloud	4	0.9
-ML Engineer	mlops	4	1
-ML Engineer	model_evaluation	4	0.7
-ML Engineer	projects	4	0.8
+career,skill,level,weight
+Data Scientist,python,4,1.0
+Data Scientist,sql,3,0.8
+Data Scientist,statistics,4,1.0
+Data Scientist,pandas,4,0.9
+Data Scientist,visualization,3,0.7
+Data Scientist,ml,4,1.0
+Data Scientist,model_evaluation,4,0.9
+Data Scientist,git,3,0.5
+Data Scientist,projects,3,0.8
+Data Scientist,deep_learning,2,0.4
+Data Scientist,cloud,2,0.3
+Data Scientist,mlops,1,0.2
+Data Analyst,sql,4,1.0
+Data Analyst,excel,4,0.9
+Data Analyst,visualization,4,1.0
+Data Analyst,pandas,3,0.8
+Data Analyst,statistics,3,0.8
+Data Analyst,python,3,0.6
+Data Analyst,projects,3,0.7
+ML Engineer,python,5,1.0
+ML Engineer,ml,4,1.0
+ML Engineer,deep_learning,4,0.8
+ML Engineer,git,4,0.8
+ML Engineer,cloud,4,0.9
+ML Engineer,mlops,4,1.0
+ML Engineer,model_evaluation,4,0.7
+ML Engineer,projects,4,0.8
