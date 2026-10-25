@@ -1,0 +1,17 @@
+skill,form,question,a,b,c,d,answer
+python	A	What does len([1, 2, 3, 4]) return?	Error	3	5	4	D
+python	B	Which keyword defines a function in Python?	def	func	function	define	A
+sql	A	Which clause filters rows AFTER grouping?	WHERE	HAVING	ORDER BY	LIMIT	B
+sql	B	Which JOIN keeps all rows from the left table even without a match?	INNER JOIN	RIGHT JOIN	CROSS JOIN	LEFT JOIN	D
+statistics	A	Which measure is least affected by outliers?	Mean	Range	Variance	Median	D
+statistics	B	A p-value below 0.05 usually means the result is...	unlikely if the null hypothesis were true	proof the null hypothesis is false	always practically important	caused by a biased sample	A
+pandas	A	Which method shows the first 5 rows of a DataFrame?	df.top()	df.first()	df.head()	df.start()	C
+pandas	B	Which expression counts missing values in each column?	df.isnull().sum()	df.count_na()	df.missing()	df.nulls()	A
+ml	A	Overfitting means the model...	does well on training data but poorly on new data	does poorly on all data	is too simple to learn patterns	has too few features	A
+ml	B	Which of these is a supervised learning task?	Grouping customers into segments	Predicting house prices from labelled examples	Reducing dimensions with PCA	Finding topics in unlabelled text	B
+model_evaluation	A	Which metric suits a heavily imbalanced classification problem better than accuracy?	Mean squared error	R-squared	F1 score	Mean absolute error	C
+model_evaluation	B	Why do we keep a separate test set?	To speed up training	To estimate performance on unseen data	To add more features	To reduce the data size	B
+git	A	Which command saves staged changes to the repository history?	git push	git add	git commit	git clone	C
+git	B	Which command downloads a copy of a remote repository?	git commit	git merge	git status	git clone	D
+visualization	A	Which chart best shows the relationship between two numeric variables?	Pie chart	Bar chart of counts	Scatter plot	Donut chart	C
+visualization	B	A histogram is mainly used to show...	the distribution of one numeric variable	trends across categories	parts of a whole	correlation between three variables	A
