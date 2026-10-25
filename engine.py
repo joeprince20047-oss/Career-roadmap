@@ -28,6 +28,7 @@ def load_prereqs(path=DATA / "prereqs.csv"):
         prereqs.setdefault(r["skill"], []).append(r["prereq"])
     return prereqs
 
+
 def all_skills(careers):
     return sorted({s for reqs in careers.values() for s in reqs})
 
