@@ -1,12 +1,12 @@
-skill	prereq
-pandas	python
-ml	python
-ml	statistics
-model_evaluation	ml
-deep_learning	ml
-mlops	ml
-mlops	git
-cloud	python
-visualization	pandas
-projects	pandas
-projects	ml
+skill,prereq
+pandas,python
+ml,python
+ml,statistics
+model_evaluation,ml
+deep_learning,ml
+mlops,ml
+mlops,git
+cloud,python
+visualization,pandas
+projects,pandas
+projects,ml
